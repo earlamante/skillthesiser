@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Skillthesiser Vocabulary</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Enhance your vocabulary one word each day!"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&family=Roboto+Serif:ital,opsz,wght@0,8..144,700;1,8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <link rel="icon" href="logo.png">
+</head>
+<body class="font-sans bg-off-white">
+    <div class="flex lg:hidden flex-col relative justify-center items-center w-full h-screen">
+        <p class="px-4 text-center">The app is only supported in desktop computers for now.</p>
+    </div>
+    <div id="splash" class="hidden lg:flex flex-col relative justify-center items-center w-full h-screen overflow-hidden">
+        <img src="logo.png" alt="Logo">
+        <h1 class="font-title uppercase text-3xl text-center">Skillthesiser</h1>
+        <h2 class="font-serif uppercase text-4xl tracking-wider text-center">Vocabulary</h2>
+        <div class="flex justify-center w-full gap-4 py-14">
+            <a href="javascript:void(0);" id="play" class="btn btn-primary">Play</a>
+        </div>
+        <p class="text-lg">Skillthesise your vocabulary one word every day.</p>
+    </div>
+    <div id="game" class="hidden flex flex-col gap-10 relative justify-center items-center w-full h-screen overflow-hidden">
+        <div class="flex absolute top-4 left-4 gap-2">
+            <img src="logo.png" class="w-14 h-auto" alt="Logo">
+            <div class="flex flex-col justify-center">
+                <h1 class="font-title uppercase text-md leading-none">Skillthesiser</h1>
+                <h2 class="font-serif uppercase text-lg tracking-widest leading-none">Vocabulary</h2>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-2 relative">
+            <div class="absolute top-0 left-0 w-full h-full"></div>
+            <div id="win-lose" class="hidden absolute top-1/2 -translate-y-1/2 -left-full">
+                <img src="win.png">
+            </div>
+            <div id="definition" class="hidden absolute top-1/2 -translate-y-1/2 -right-full -mr-10 border-2 rounded-md p-4 max-w-sm">
+                <h4 class="status font-serif text-2xl text-center uppercase"></h4>
+                <p class="msg text-xl text-center mb-6"></p>
+                <h4 class="word font-sans font-bold text-2xl text-center uppercase"></h4>
+                <p class="definition"></p>
+            </div>
+            <div id="row-0" class="flex gap-1"><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div></div>
+            <div id="row-1" class="flex gap-1"><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div></div>
+            <div id="row-2" class="flex gap-1"><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div></div>
+            <div id="row-3" class="flex gap-1"><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div></div>
+            <div id="row-4" class="flex gap-1"><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div></div>
+            <div id="row-5" class="flex gap-1"><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div><div class="card"></div></div>
+        </div>
+        <div class="flex flex-col justify-center gap-2">
+            <div class="flex justify-center gap-1">
+                <button class="key q">q</button>
+                <button class="key w">w</button>
+                <button class="key e">e</button>
+                <button class="key r">r</button>
+                <button class="key t">t</button>
+                <button class="key y">y</button>
+                <button class="key u">u</button>
+                <button class="key i">i</button>
+                <button class="key o">o</button>
+                <button class="key p">p</button>
+            </div>
+            <div class="flex justify-center gap-1">
+                <button class="key a">a</button>
+                <button class="key s">s</button>
+                <button class="key d">d</button>
+                <button class="key f">f</button>
+                <button class="key g">g</button>
+                <button class="key h">h</button>
+                <button class="key j">j</button>
+                <button class="key k">k</button>
+                <button class="key l">l</button>
+                <button class="key wide">enter</button>
+            </div>
+            <div class="flex justify-center gap-1">
+                <button class="key z">z</button>
+                <button class="key x">x</button>
+                <button class="key c">c</button>
+                <button class="key v">v</button>
+                <button class="key b">b</button>
+                <button class="key n">n</button>
+                <button class="key m">m</button>
+                <button class="key wide"><img src="icon-backspace.png" alt="backspace"></button>
+            </div>
+        </div>
+    </div>
+    <div id="snackbar"></div>
+    <script src="jq.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

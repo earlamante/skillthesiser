@@ -1,0 +1,12 @@
+{
+  "name": "skillthesiser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./style.scss -o ./app.css",
+    "tailwind-watch": "npx tailwindcss -i ./style.scss -o ./app.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
