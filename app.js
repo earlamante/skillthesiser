@@ -6,7 +6,7 @@
         guess = '',
         max = 7,
         word = '',
-        dayZero = new Date("19-Dec-2024"),
+        dayZero = new Date("9-Dec-2024"),
         today = new Date();
 
     let winScreen = function() {
@@ -40,6 +40,7 @@
         for(i=0; i<w.length ;i++) {
             if(w[i] === g[i]) {
                 elems.eq(i).addClass('g');
+                $('.key.'+g[i]).addClass('check');
                 w[i] = "";
                 g[i] = "";
             }
@@ -51,6 +52,7 @@
             for(x=0; x<w.length ;x++) {
                 if(g[i] === w[x]) {
                     elems.eq(i).addClass('y');
+                    $('.key.'+g[i]).addClass('check');
                     w[x] = "";
                     c = true;
                     break;

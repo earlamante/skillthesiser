@@ -926,6 +926,10 @@ video {
   text-transform: uppercase;
 }
 
+.key.check {
+  color: #000000 !important;
+}
+
 .key.used {
   color: #888888;
 }
